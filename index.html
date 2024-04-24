@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How We Feelin'?</title>
+<style>
+    /* Some basic styling for the survey */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    .question {
+        margin-bottom: 10px;
+    }
+    .radio-buttons {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    .comment-box {
+        display: none; /* Initially hidden */
+        margin-top: 10px;
+    }
+</style>
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="favicon_io/site.webmanifest">
+</head>
+<body>
+    <h1>Team 10: How Feelin?!</h1>
+    <div class="question">
+        <div class="radio-buttons">
+            <label>
+                <input type="radio" name="sentiment" value="very-positive"> Very Positive
+            </label>
+            <label>
+                <input type="radio" name="sentiment" value="positive"> Positive
+            </label>
+            <label>
+                <input type="radio" name="sentiment" value="neutral"> Neutral
+            </label>
+            <label>
+                <input type="radio" name="sentiment" value="negative"> Negative
+            </label>
+            <label>
+                <input type="radio" name="sentiment" value="very-negative"> Very Negative
+            </label>
+        </div>
+    </div>
+    <div class="comment-box">
+        <label for="comment">Additional Comments:</label>
+        <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+        <br>
+        <button id="submit">Submit</button>
+    </div>
+
+    <script>
+        // Get all radio buttons
+        const radios = document.querySelectorAll('input[type="radio"]');
+        const commentBox = document.querySelector('.comment-box');
+
+        // Add event listener to each radio button
+        radios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                // Show the comment box when any radio button is clicked
+                commentBox.style.display = 'block';
+            });
+        });
+
+        // Submit button functionality
+        document.getElementById('submit').addEventListener('click', function() {
+            const sentiment = document.querySelector('input[name="sentiment"]:checked').value;
+            const comment = document.getElementById('comment').value;
+            // You can do something with the selected sentiment and comment here, like send them to a server
+            console.log('Sentiment:', sentiment);
+            console.log('Comment:', comment);
+            // For now, let's just reset the form
+            commentBox.style.display = 'none';
+            document.querySelector('input[name="sentiment"]:checked').checked = false;
+            document.getElementById('comment').value = '';
+        });
+    </script>
+</body>
+</html>
