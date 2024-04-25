@@ -1,0 +1,17 @@
+/* styles.css */
+.feedback-icon {
+  width: 100px;
+  margin: 0 20px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.feedback-icon:hover {
+  transform: scale(1.5);
+}
+
+#response-message {
+  margin-top: 20px;
+  color: green;
+  font-size: 20px;
+}
