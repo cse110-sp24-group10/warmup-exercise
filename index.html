@@ -107,19 +107,6 @@
         });
         */
 
-        // Submit button functionality
-        document.getElementById('submit').addEventListener('click', function() {
-            const sentiment = document.querySelector('input[name="sentiment"]:checked').value;
-            const comment = document.getElementById('comment').value;
-            // You can do something with the selected sentiment and comment here, like send them to a server
-            console.log('Sentiment:', sentiment);
-            console.log('Comment:', comment);
-            // For now, let's just reset the form
-            commentBox.style.display = 'none';
-            document.querySelector('input[name="sentiment"]:checked').checked = false;
-            document.getElementById('comment').value = '';
-        });
-
         // Keyboard navigation for icons
         const icons = document.querySelectorAll('.feedback-icon');
         let currentIndex = 0;
