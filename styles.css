@@ -64,7 +64,9 @@ body {
 }
 
 .dark-mode {
-  background-color: #282A36;
+  background-color: #2b3137;
+  color: white;
+  
 }
 
 .titleContainer {
