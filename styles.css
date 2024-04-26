@@ -1,4 +1,6 @@
 /* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Hind&display=swap');
+
 .feedback-icon {
   width: 100px;
   margin: 0 20px;
@@ -13,13 +15,15 @@
 #response-message {
   margin-top: 20px;
   color: green;
-  font-size: 20px;
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 .footerBar {
   background-color: black;
   position: fixed; /* Change position to fixed */
-  padding: 10px;
+  padding: 35px;
   left: 0;
   bottom: 0;
   display: flex; /* Use flexbox to align content */
@@ -52,6 +56,85 @@
   cursor: pointer;
 }
 
+body {
+    font-family: 'Hind', sans-serif;
+    background-color: rgb(246, 244, 239);
+    color: black;
+    margin: 0px;
+    padding-bottom: 300px;
+}
+
+.dark-mode {
+  background-color: #282A36;
+  color: white;
+}
+
+.titleContainer {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+  background-color: gray;
+  position: relative;
+  padding: 30px;
+  margin: 0px;
+  overflow: hidden;
+  /*to allow absolute position of darkmode button*/
+  position: relative;
+}
+
+#logo {
+  width: 75px;
+  float: left;
+  padding-right: 25px;
+}
+
+h1 {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.darkControls {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+}
+
 .feedback-icon.selected {
   transform: scale(1.5);
 }
+
+.icons {
+  padding-top: 25px;
+}
+
+#sentiments {
+    padding-top: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.comment-box * {
+    margin-top: 10px;
+    margin-bottom: 10px; 
+}
+
+#submit {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #submit:hover {
+    background-color: #45a049; /* Darker green */
+  }

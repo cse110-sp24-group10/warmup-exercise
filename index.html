@@ -34,10 +34,18 @@
 <body>
     <div class="titleContainer">
         <img id="logo" src="icons/team10-logo.png" alt="logo">
-        <h1>Team 10: How We Feelin?!</h1>
+        
+        <h1 id="main-title">Team 10: How We Feelin?!</h1>
+
+        <div class="darkControls">
+        <input type="checkbox" id="darkCB" class="checkbox">
+        <label id="darkStatus">Dark Mode Disabled</label>
+        </div>
+
     </div>
-    
+  
     <!-- icons -->
+    <div id="sentiments">
     <div class="icons">
         <img src="icons/verynegative.png" alt="Very Negative" class="feedback-icon" data-sentiment="Very Negative">
         <img src="icons/negative.png" alt="Negative" class="feedback-icon" data-sentiment="Negative">
@@ -56,7 +64,7 @@
         <br>
         <button id="submit">Submit</button>
     </div>
-
+    </div>
     <noscript>
         <div class="question">
             <div class="radio-buttons">
@@ -106,6 +114,30 @@
             document.getElementById('comment').value = '';
         });
         */
+
+        document.getElementById('darkCB').addEventListener('change', function() {
+            if (this.checked) {
+                document.body.classList.add('dark-mode');
+                document.getElementById("darkStatus").textContent="Dark Mode Enabled";
+            } 
+
+            else {
+                document.body.classList.remove('dark-mode');
+                document.getElementById("darkStatus").textContent="Dark Mode Disabled";
+            }
+        });
+        // Submit button functionality
+        document.getElementById('submit').addEventListener('click', function() {
+            const sentiment = document.querySelector('input[name="sentiment"]:checked').value;
+            const comment = document.getElementById('comment').value;
+            // You can do something with the selected sentiment and comment here, like send them to a server
+            console.log('Sentiment:', sentiment);
+            console.log('Comment:', comment);
+            // For now, let's just reset the form
+            commentBox.style.display = 'none';
+            document.querySelector('input[name="sentiment"]:checked').checked = false;
+            document.getElementById('comment').value = '';
+        });
 
         // Keyboard navigation for icons
         const icons = document.querySelectorAll('.feedback-icon');
