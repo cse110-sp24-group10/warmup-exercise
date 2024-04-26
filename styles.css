@@ -58,8 +58,14 @@
 /*title card style*/
 .titleContainer {
   background-color: lightgray;
-  padding: 0px;
+  padding: 30px;
   margin: 0px;
+}
+
+#logo {
+  width: 75px;
+  float: left;
+  padding-right: 25px;
 }
 /*so that it spans the whole page*/
 body{
