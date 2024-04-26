@@ -33,14 +33,17 @@
 </head>
 <body>
     <div class="top">
-        <h1>Team 10: How We Feelin?!</h1>
+        <div class="titleContainer">
+          <img id="logo" src="icons/team10-logo.png" alt="logo">
+          <h1>Team 10: How We Feelin?!</h1>
+      </div>
 
         <div class="darkControls">
             <input type="checkbox" id="darkCB" class="checkbox">
             <label id="darkStatus">Dark Mode Disabled</label>
         </div>
     </div>
-
+  
     <!-- icons -->
     <div class="icons">
         <img src="icons/verynegative.png" alt="Very Negative" class="feedback-icon" data-sentiment="Very Negative">
@@ -83,7 +86,6 @@
         </div>
     </noscript>
     
-
     <script>
         /*
         // Get all radio buttons
@@ -123,13 +125,59 @@
                 document.getElementById("darkStatus").textContent="Dark Mode Disabled";
             }
         });
+        // Submit button functionality
+        document.getElementById('submit').addEventListener('click', function() {
+            const sentiment = document.querySelector('input[name="sentiment"]:checked').value;
+            const comment = document.getElementById('comment').value;
+            // You can do something with the selected sentiment and comment here, like send them to a server
+            console.log('Sentiment:', sentiment);
+            console.log('Comment:', comment);
+            // For now, let's just reset the form
+            commentBox.style.display = 'none';
+            document.querySelector('input[name="sentiment"]:checked').checked = false;
+            document.getElementById('comment').value = '';
+        });
+
+        // Keyboard navigation for icons
+        const icons = document.querySelectorAll('.feedback-icon');
+        let currentIndex = 0;
+
+        // Function to handle keyboard events
+        function handleKeyboardEvent(event) {
+            if (event.key === 'ArrowLeft') {
+                currentIndex = (currentIndex === 0) ? icons.length - 1 : currentIndex - 1;
+            } else if (event.key === 'ArrowRight') {
+                currentIndex = (currentIndex === icons.length - 1) ? 0 : currentIndex + 1;
+            } else if (event.key === 'Enter' || event.key === 'Return') {
+                icons[currentIndex].click();
+            } else if (event.key === 'ArrowDown') {
+                // Move focus to the comment box if not already focused
+                if (!document.activeElement.classList.contains('comment-box')) {
+                    document.getElementById('comment').focus();
+                    return;
+                }
+                // If focus is on the comment box, move focus to the submit button
+                if (document.activeElement === document.getElementById('comment')) {
+                    document.getElementById('submit').focus();
+                    return;
+                }
+            }
+            // Remove the 'selected' class from all icons
+            icons.forEach(icon => icon.classList.remove('selected'));
+            // Add the 'selected' class to the current icon
+            icons[currentIndex].classList.add('selected');
+        }
+
+        // Add event listener for keyboard events
+        document.addEventListener('keydown', handleKeyboardEvent);
     </script>
+    <!-- footer bar with contact and behind the scenes -->
+    <footer class="footerBar">
+        <div class="contactUs">
+            <a href="https://github.com/cse110-sp24-group10/cse110-sp24-group10/blob/main/admin/team.md">Contact Us</a>
+            <a href="https://github.com/cse110-sp24-group10/warmup-exercise">Behind the Scenes</a>
+        </div>
+    </footer>
 </body>
-<!-- footer bar with contact and behind the scenes -->
-<footer class="footerBar">
-    <div class="contactUs">
-        <a href="https://github.com/cse110-sp24-group10/cse110-sp24-group10/blob/main/admin/team.md">Contact Us</a>
-        <a href="https://github.com/cse110-sp24-group10/warmup-exercise">Behind the Scenes</a>
-    </div>
-</footer>
+    
 </html>
