@@ -32,7 +32,14 @@
 
 </head>
 <body>
-    <h1>Team 10: How We Feelin?!</h1>
+    <div class="top">
+        <h1>Team 10: How We Feelin?!</h1>
+
+        <div class="darkControls">
+            <input type="checkbox" id="darkCB" class="checkbox">
+            <label id="darkStatus">Dark Mode Disabled</label>
+        </div>
+    </div>
 
     <!-- icons -->
     <div class="icons">
@@ -104,6 +111,18 @@
             document.getElementById('comment').value = '';
         });
         */
+
+        document.getElementById('darkCB').addEventListener('change', function() {
+            if (this.checked) {
+                document.body.classList.add('dark-mode');
+                document.getElementById("darkStatus").textContent="Dark Mode Enabled";
+            } 
+
+            else {
+                document.body.classList.remove('dark-mode');
+                document.getElementById("darkStatus").textContent="Dark Mode Disabled";
+            }
+        });
     </script>
 </body>
 <!-- footer bar with contact and behind the scenes -->
