@@ -19,7 +19,7 @@
 .footerBar {
   background-color: black;
   position: fixed; /* Change position to fixed */
-  padding: 10px;
+  padding: 35px;
   left: 0;
   bottom: 0;
   display: flex; /* Use flexbox to align content */
@@ -55,6 +55,7 @@
 body {
   background-color: white;
   color: black;
+  margin: 0px;
 }
 
 .dark-mode {
@@ -63,10 +64,19 @@ body {
 }
 
 .titleContainer {
-  display: grid;
-  /justify-content: space-between;
-  grid-template-columns: 32em;
-  padding-bottom: 2em;
+  background-color: lightgray;
+  position: relative;
+  padding: 30px;
+  margin: 0px;
+  overflow: hidden;
+  /*to allow absolute position of darkmode button*/
+  position: relative;
+}
+
+#logo {
+  width: 75px;
+  float: left;
+  padding-right: 25px;
 }
 
 h1 {
@@ -76,11 +86,16 @@ h1 {
 }
 
 .darkControls {
-  grid-row-start: 1;
-  grid-column-start: 2;
-  grid-column-end: 2;
-  padding-top: 2em;
+  position: absolute;
+  top: 60px;
+  right: 60px;
+}
 
 .feedback-icon.selected {
   transform: scale(1.5);
+}
+
+.icons {
+  padding-top: 25px;
+  padding-left: 25%;
 }
