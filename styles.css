@@ -183,12 +183,12 @@ h1 {
     #negative {
       position: absolute;
       margin-top: 100px;
-      left: 80px;
+      margin-left: -50px;
     }
 
     #positive {
       position: absolute;
       margin-top: 100px;
-      right: 80px;
+      margin-left: -50px;
     }
 }
