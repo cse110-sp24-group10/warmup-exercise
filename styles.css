@@ -62,10 +62,11 @@ body {
   color: white;
 }
 
-.top {
+.titleContainer {
   display: grid;
-  /justify-content: space-between;/
+  /justify-content: space-between;
   grid-template-columns: 32em;
+  padding-bottom: 2em;
 }
 
 h1 {
