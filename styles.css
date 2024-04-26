@@ -66,12 +66,13 @@ body {
 
 .dark-mode {
   background-color: #282A36;
+  color: white;
 }
 
 .titleContainer {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
-  background-color: lightgray;
+  background-color: gray;
   position: relative;
   padding: 30px;
   margin: 0px;
