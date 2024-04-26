@@ -61,6 +61,7 @@ body {
     background-color: rgb(246, 244, 239);
     color: black;
     margin: 0px;
+    padding-bottom: 300px;
 }
 
 .dark-mode {
