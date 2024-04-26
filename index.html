@@ -32,11 +32,18 @@
 
 </head>
 <body>
-    <div class="titleContainer">
-        <img id="logo" src="icons/team10-logo.png" alt="logo">
-        <h1>Team 10: How We Feelin?!</h1>
+    <div class="top">
+        <div class="titleContainer">
+          <img id="logo" src="icons/team10-logo.png" alt="logo">
+          <h1>Team 10: How We Feelin?!</h1>
+      </div>
+
+        <div class="darkControls">
+            <input type="checkbox" id="darkCB" class="checkbox">
+            <label id="darkStatus">Dark Mode Disabled</label>
+        </div>
     </div>
-    
+  
     <!-- icons -->
     <div class="icons">
         <img src="icons/verynegative.png" alt="Very Negative" class="feedback-icon" data-sentiment="Very Negative">
@@ -107,6 +114,17 @@
         });
         */
 
+        document.getElementById('darkCB').addEventListener('change', function() {
+            if (this.checked) {
+                document.body.classList.add('dark-mode');
+                document.getElementById("darkStatus").textContent="Dark Mode Enabled";
+            } 
+
+            else {
+                document.body.classList.remove('dark-mode');
+                document.getElementById("darkStatus").textContent="Dark Mode Disabled";
+            }
+        });
         // Submit button functionality
         document.getElementById('submit').addEventListener('click', function() {
             const sentiment = document.querySelector('input[name="sentiment"]:checked').value;
