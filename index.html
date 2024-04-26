@@ -162,6 +162,8 @@
                     document.getElementById('submit').focus();
                     return;
                 }
+            } else {
+                return;
             }
             // Remove the 'selected' class from all icons
             icons.forEach(icon => icon.classList.remove('selected'));
