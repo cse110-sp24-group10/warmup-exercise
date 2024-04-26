@@ -12,6 +12,31 @@
   transform: scale(1.5);
 }
 
+.feedback-icon:focus {
+  max-width: 2em;
+  max-height: auto; 
+}
+
+#btn-1.clicked {
+  transform: scale(1.5);
+}
+
+#btn-2.clicked {
+  transform: scale(1.5);
+}
+
+#btn-3.clicked {
+  transform: scale(1.5);
+}
+
+#btn-4.clicked {
+  transform: scale(1.5);
+}
+
+#btn-5.clicked {
+  transform: scale(1.5);
+}
+
 #response-message {
   margin-top: 20px;
   color: green;
@@ -97,10 +122,6 @@ h1 {
   position: absolute;
   top: 60px;
   right: 60px;
-}
-
-.feedback-icon.selected {
-  transform: scale(1.5);
 }
 
 .icons {

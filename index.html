@@ -47,11 +47,11 @@
     <!-- icons -->
     <div id="sentiments">
     <div class="icons">
-        <img src="icons/verynegative.png" alt="Very Negative" class="feedback-icon" data-sentiment="Very Negative">
-        <img src="icons/negative.png" alt="Negative" class="feedback-icon" data-sentiment="Negative">
-        <img src="icons/neutral.png" alt="Neutral" class="feedback-icon" data-sentiment="Neutral">
-        <img src="icons/positive.png" alt="Positive" class="feedback-icon" data-sentiment="Positive">
-        <img src="icons/verypositive.png" alt="Very Positive" class="feedback-icon" data-sentiment="Very Positive">
+        <img id="btn-1" src="icons/verynegative.png" alt="Very Negative" class="feedback-icon" data-sentiment="Very Negative">
+        <img id="btn-2" src="icons/negative.png" alt="Negative" class="feedback-icon" data-sentiment="Negative">
+        <img id="btn-3" src="icons/neutral.png" alt="Neutral" class="feedback-icon" data-sentiment="Neutral">
+        <img id="btn-4" src="icons/positive.png" alt="Positive" class="feedback-icon" data-sentiment="Positive">
+        <img id="btn-5" src="icons/verypositive.png" alt="Very Positive" class="feedback-icon" data-sentiment="Very Positive">
     </div>
     <div id="response-message"></div>
 
@@ -173,6 +173,27 @@
 
         // Add event listener for keyboard events
         document.addEventListener('keydown', handleKeyboardEvent);
+
+        // Changes size of button after clicked
+        document.getElementById('btn-1').addEventListener('click', function() {
+            this.classList.toggle('clicked');
+        });
+
+        document.getElementById('btn-2').addEventListener('click', function() {
+            this.classList.toggle('clicked');
+        });
+
+        document.getElementById('btn-3').addEventListener('click', function() {
+            this.classList.toggle('clicked');
+        });
+
+        document.getElementById('btn-4').addEventListener('click', function() {
+            this.classList.toggle('clicked');
+        });
+
+        document.getElementById('btn-5').addEventListener('click', function() {
+            this.classList.toggle('clicked');
+        });
     </script>
     <!-- footer bar with contact and behind the scenes -->
     <footer class="footerBar">
