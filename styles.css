@@ -18,14 +18,16 @@
 
 .footerBar {
   background-color: black;
-  position: absolute;
-  padding: 35px;
+  position: fixed; /* Change position to fixed */
+  padding: 10px;
+  left: 0;
   bottom: 0;
-  display: block;
-  /*justify-content: space-between;*/
-  width: 100%;
+  display: flex; /* Use flexbox to align content */
+  justify-content: flex-end; /* Align content to the right */
+  width: 100%; /* Take up full width of the screen */
   max-height: 35px;
   text-align: right;
+  overflow: hidden; /* Hide any overflow content */
 }
   
 .contactUs {
@@ -60,10 +62,11 @@ body {
   color: white;
 }
 
-.top {
+.titleContainer {
   display: grid;
-  /justify-content: space-between;/
+  /justify-content: space-between;
   grid-template-columns: 32em;
+  padding-bottom: 2em;
 }
 
 h1 {
@@ -77,4 +80,7 @@ h1 {
   grid-column-start: 2;
   grid-column-end: 2;
   padding-top: 2em;
+
+.feedback-icon.selected {
+  transform: scale(1.5);
 }
