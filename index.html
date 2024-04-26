@@ -46,36 +46,39 @@
 
     <script src="scripts.js"></script>
 
-
-
-    <div class="question">
-        <div class="radio-buttons">
-            <label>
-                <input type="radio" name="sentiment" value="very-negative"> Very Negative
-            </label>
-            <label>
-                <input type="radio" name="sentiment" value="negative"> Negative
-            </label>
-            <label>
-                <input type="radio" name="sentiment" value="neutral"> Neutral
-            </label>
-            <label>
-                <input type="radio" name="sentiment" value="positive"> Positive
-            </label>
-            <label>
-                <input type="radio" name="sentiment" value="very-positive"> Very Positive
-            </label>
-        </div>
-    </div>
     <div class="comment-box">
         <label for="comment">Additional Comments:</label>
+        <br>
         <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
         <br>
         <button id="submit">Submit</button>
     </div>
+
+    <noscript>
+        <div class="question">
+            <div class="radio-buttons">
+                <label>
+                    <input type="radio" name="sentiment" value="very-negative"> Very Negative
+                </label>
+                <label>
+                    <input type="radio" name="sentiment" value="negative"> Negative
+                </label>
+                <label>
+                    <input type="radio" name="sentiment" value="neutral"> Neutral
+                </label>
+                <label>
+                    <input type="radio" name="sentiment" value="positive"> Positive
+                </label>
+                <label>
+                    <input type="radio" name="sentiment" value="very-positive"> Very Positive
+                </label>
+            </div>
+        </div>
+    </noscript>
     
 
     <script>
+        /*
         // Get all radio buttons
         const radios = document.querySelectorAll('input[type="radio"]');
         const commentBox = document.querySelector('.comment-box');
@@ -100,13 +103,14 @@
             document.querySelector('input[name="sentiment"]:checked').checked = false;
             document.getElementById('comment').value = '';
         });
+        */
     </script>
 </body>
 <!-- footer bar with contact and behind the scenes -->
 <footer class="footerBar">
-    <div>
-        <button>Contact Us</button>
-        <button>Behind the Scenes</button>
+    <div class="contactUs">
+        <a href="https://github.com/cse110-sp24-group10/cse110-sp24-group10/blob/main/admin/team.md">Contact Us</a>
+        <a href="https://github.com/cse110-sp24-group10/warmup-exercise">Behind the Scenes</a>
     </div>
 </footer>
 </html>

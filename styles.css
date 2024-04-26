@@ -15,3 +15,37 @@
   color: green;
   font-size: 20px;
 }
+
+.footerBar {
+  background-color: black;
+  position: absolute;
+  padding: 35px;
+  bottom: 0;
+  display: block;
+  /*justify-content: space-between;*/
+  width: 100%;
+  max-height: 35px;
+  text-align: right;
+}
+  
+.contactUs {
+  font-size: 35px;
+}
+
+/* Link when not clicked */
+.contactUs a:link {
+  color: white;
+  margin-right: 50px;
+}
+
+/* Link after being visited */
+.contactUs a:visited {
+  color: lightgrey;
+}
+
+/* Link when hovering */
+.contactUs a:hover{
+  font-size: 45px;
+  transition: 0.1s;
+  cursor: pointer;
+}
