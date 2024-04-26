@@ -49,3 +49,32 @@
   transition: 0.1s;
   cursor: pointer;
 }
+
+body {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: #282A36;
+  color: white;
+}
+
+.top {
+  display: grid;
+  /justify-content: space-between;/
+  grid-template-columns: 32em;
+}
+
+h1 {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.darkControls {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  padding-top: 2em;
+}
