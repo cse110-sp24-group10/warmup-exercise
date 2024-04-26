@@ -18,30 +18,33 @@
 
 .footerBar {
   background-color: black;
-  position: fixed; /* Change position to fixed */
-  padding: 10px;
+  position: absolute;
   left: 0;
+  right: 0;
+  padding: 35px;
   bottom: 0;
-  display: flex; /* Use flexbox to align content */
-  justify-content: flex-end; /* Align content to the right */
-  width: 100%; /* Take up full width of the screen */
+  display: block;
   max-height: 35px;
   text-align: right;
-  overflow: hidden; /* Hide any overflow content */
+  margin: 0px;
 }
   
 .contactUs {
   font-size: 35px;
+  text-decoration: none;
 }
 
 /* Link when not clicked */
 .contactUs a:link {
+  text-decoration: none;
   color: white;
   margin-right: 50px;
 }
 
-/* Link after being visited */
+/* Link after being visited (keeps color a certain way) */
+
 .contactUs a:visited {
+  text-decoration: none;
   color: lightgrey;
 }
 
@@ -52,6 +55,19 @@
   cursor: pointer;
 }
 
-.feedback-icon.selected {
-  transform: scale(1.5);
+/*title card style*/
+.titleContainer {
+  background-color: lightgray;
+  padding: 30px;
+  margin: 0px;
+}
+
+#logo {
+  width: 75px;
+  float: left;
+  padding-right: 25px;
+}
+/*so that it spans the whole page*/
+body{
+  margin: 0px;
 }
