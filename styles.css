@@ -19,27 +19,32 @@
 .footerBar {
   background-color: black;
   position: absolute;
+  left: 0;
+  right: 0;
   padding: 35px;
   bottom: 0;
   display: block;
-  /*justify-content: space-between;*/
-  width: 100%;
   max-height: 35px;
   text-align: right;
+  margin: 0px;
 }
   
 .contactUs {
   font-size: 35px;
+  text-decoration: none;
 }
 
 /* Link when not clicked */
 .contactUs a:link {
+  text-decoration: none;
   color: white;
   margin-right: 50px;
 }
 
-/* Link after being visited */
+/* Link after being visited (keeps color a certain way) */
+
 .contactUs a:visited {
+  text-decoration: none;
   color: lightgrey;
 }
 
@@ -48,4 +53,21 @@
   font-size: 45px;
   transition: 0.1s;
   cursor: pointer;
+}
+
+/*title card style*/
+.titleContainer {
+  background-color: lightgray;
+  padding: 30px;
+  margin: 0px;
+}
+
+#logo {
+  width: 75px;
+  float: left;
+  padding-right: 25px;
+}
+/*so that it spans the whole page*/
+body{
+  margin: 0px;
 }
