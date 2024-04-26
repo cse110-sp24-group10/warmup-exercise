@@ -18,33 +18,30 @@
 
 .footerBar {
   background-color: black;
-  position: absolute;
+  position: fixed; /* Change position to fixed */
+  padding: 10px;
   left: 0;
-  right: 0;
-  padding: 35px;
   bottom: 0;
-  display: block;
+  display: flex; /* Use flexbox to align content */
+  justify-content: flex-end; /* Align content to the right */
+  width: 100%; /* Take up full width of the screen */
   max-height: 35px;
   text-align: right;
-  margin: 0px;
+  overflow: hidden; /* Hide any overflow content */
 }
   
 .contactUs {
   font-size: 35px;
-  text-decoration: none;
 }
 
 /* Link when not clicked */
 .contactUs a:link {
-  text-decoration: none;
   color: white;
   margin-right: 50px;
 }
 
-/* Link after being visited (keeps color a certain way) */
-
+/* Link after being visited */
 .contactUs a:visited {
-  text-decoration: none;
   color: lightgrey;
 }
 
@@ -55,19 +52,6 @@
   cursor: pointer;
 }
 
-/*title card style*/
-.titleContainer {
-  background-color: lightgray;
-  padding: 30px;
-  margin: 0px;
-}
-
-#logo {
-  width: 75px;
-  float: left;
-  padding-right: 25px;
-}
-/*so that it spans the whole page*/
-body{
-  margin: 0px;
+.feedback-icon.selected {
+  transform: scale(1.5);
 }
