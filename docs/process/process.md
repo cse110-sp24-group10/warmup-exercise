@@ -37,6 +37,12 @@ the ability to switch between the light and dark mode.
 
 ![Snapshot which shows website into dark-mode](Darkmode.png)
 
+Another user story that exists is the existence of the ability to operate the website in different screen sizes. Below is a snapshot which shows 
+how the web app would look in mobile applications.
+
+![The way how website looks in mobile](Mobile.png)
+
+
 ## Snapshots tackling creator stories
 
 The first thing we implemented from our own recommendations was the range of icons from smiley to sad
