@@ -173,6 +173,26 @@
 
         // Add event listener for keyboard events
         document.addEventListener('keydown', handleKeyboardEvent);
+
+        document.getElementById('very-negative').addEventListener('click', function() {
+            this.classList.toggle('clicked');
+        });
+
+        document.getElementById('negative').addEventListener('click', function() {
+            this.classList.toggle('clicked');
+        });
+
+        document.getElementById('neutral').addEventListener('click', function() {
+            this.classList.toggle('clicked');
+        });
+
+        document.getElementById('positive').addEventListener('click', function() {
+            this.classList.toggle('clicked');
+        });
+
+        document.getElementById('very-positive').addEventListener('click', function() {
+            this.classList.toggle('clicked');
+        }); 
     </script>
     <!-- footer bar with contact and behind the scenes -->
     <footer class="footerBar">
